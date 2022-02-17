@@ -1,10 +1,19 @@
 package Assignment2;
 
+import java.util.Scanner;
+
 public class Circle1 implements Operations {
     private double radius;
+    Scanner sc = new Scanner(System.in);
 
-    Circle1(double radius) {
-        this.radius = radius;
+    public void input() {
+        try {
+            System.out.print("\nEnter radius of circle : ");
+            radius = sc.nextDouble();
+            System.out.println();
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        }
     }
 
     public void area() {
@@ -29,10 +38,4 @@ public class Circle1 implements Operations {
 
     }
 
-    public static void main(String[] args) {
-        Circle1 c = new Circle1(5.3);
-        c.area();
-        c.parameter();
-
-    }
 }

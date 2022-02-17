@@ -1,13 +1,23 @@
 package Assignment2;
 
 public class Triangle2 implements Operations {
-    private double height, base, side1, side2;
+    private double height, base, side2, side3;
 
-    Triangle2(double base, double height, double side1, double side2) {
-        this.base = base;
-        this.height = height;
-        this.side1 = side1;
-        this.side2 = side2;
+    public void input() {
+        height = 0;
+        try {
+            System.out.print("\nEnter height of triangle : ");
+            height = sc.nextDouble();
+            System.out.print("\nEnter base(side1) of triangle : ");
+            base = sc.nextDouble();
+            System.out.print("\nEnter side2 of triangle : ");
+            side2 = sc.nextDouble();
+            System.out.print("\nEnter side3 of triangle : ");
+            side3 = sc.nextDouble();
+            System.out.println();
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        }
     }
 
     public void area() {
@@ -16,7 +26,7 @@ public class Triangle2 implements Operations {
     }
 
     public void parameter() {
-        double parameter = base + side1 + side2;
+        double parameter = base + side2 + side3;
         System.out.println("Parameter of Triangle = " + parameter);
     }
 
