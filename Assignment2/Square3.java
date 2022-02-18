@@ -1,10 +1,19 @@
 package Assignment2;
 
+import java.util.Scanner;
+
 public class Square3 implements Operations {
     private double side;
+    private Scanner sc = new Scanner(System.in);
 
-    Square3(double side) {
-        this.side = side;
+    public void input() {
+        try {
+            System.out.print("\nEnter side of square : ");
+            side = sc.nextDouble();
+            System.out.println();
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        }
     }
 
     public void area() {

@@ -1,7 +1,10 @@
 package Assignment2;
 
+import java.util.Scanner;
+
 public class Triangle2 implements Operations {
     private double height, base, side2, side3;
+    private Scanner sc = new Scanner(System.in);
 
     public void input() {
         height = 0;

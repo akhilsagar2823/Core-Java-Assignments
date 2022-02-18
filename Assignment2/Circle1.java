@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Circle1 implements Operations {
     private double radius;
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
     public void input() {
         try {

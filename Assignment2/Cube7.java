@@ -1,10 +1,19 @@
 package Assignment2;
 
+import java.util.Scanner;
+
 public class Cube7 implements Operations {
     private double edege;
+    private Scanner sc = new Scanner(System.in);
 
-    Cube7(double edege) {
-        this.edege = edege;
+    public void input() {
+        try {
+            System.out.print("\nEnter edege of cube : ");
+            edege = sc.nextDouble();
+            System.out.println();
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        }
     }
 
     public void area() {

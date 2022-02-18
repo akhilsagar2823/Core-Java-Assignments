@@ -1,12 +1,25 @@
 package Assignment2;
 
+import java.util.Scanner;
+
 public class Cuboid8 implements Operations {
     private double length, height, width;
+    private Scanner sc = new Scanner(System.in);
 
-    Cuboid8(double length, double height, double width) {
-        this.length = length;
-        this.height = height;
-        this.width = width;
+    public void input() {
+        try {
+            System.out.print("\nEnter length of cuboid : ");
+            length = sc.nextDouble();
+            System.out.println();
+            System.out.print("\nEnter width of cuboid : ");
+            width = sc.nextDouble();
+            System.out.println();
+            System.out.print("\nEnter height of cuboid : ");
+            height = sc.nextDouble();
+            System.out.println();
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        }
     }
 
     public void area() {

@@ -1,11 +1,22 @@
 package Assignment2;
 
+import java.util.Scanner;
+
 public class Cylinder9 implements Operations {
     private double radius, height;
+    private Scanner sc = new Scanner(System.in);
 
-    Cylinder9(double radius, double height) {
-        this.radius = radius;
-        this.height = height;
+    public void input() {
+        try {
+            System.out.print("\nEnter radius of cylinder : ");
+            radius = sc.nextDouble();
+            System.out.println();
+            System.out.print("\nEnter height of cylinder : ");
+            height = sc.nextDouble();
+            System.out.println();
+        } catch (Exception e) {
+            throw new ArithmeticException();
+        }
     }
 
     public void area() {

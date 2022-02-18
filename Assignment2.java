@@ -16,11 +16,11 @@ public class Assignment2 {
                 choice = sc.nextInt();
                 switch (choice) {
                     case 1:
-                        Circle1 c = new Circle1();
+                        Circle1 circle = new Circle1();
                         try {
-                            c.input();
-                            c.area();
-                            c.parameter();
+                            circle.input();
+                            circle.area();
+                            circle.parameter();
                         } catch (Exception e) {
                             System.out.println("\nInvalid Input!!!\n");
                         }
@@ -36,6 +36,14 @@ public class Assignment2 {
                         }
                         break;
                     case 3:
+                        Square3 square = new Square3();
+                        try {
+                            square.input();
+                            square.area();
+                            square.parameter();
+                        } catch (Exception e) {
+                            System.out.println("\nInvalid Input!!!\n");
+                        }
                         break;
                     case 4:
                         break;
