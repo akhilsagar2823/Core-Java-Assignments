@@ -20,6 +20,7 @@ public class WordsCount {
 
     public static int[] wordsCount(String urlline, String[] words, int[] countword) {
         String[] split = urlline.split(" ");
+
         for (int i = 0; i < split.length; i++) {
             if (words[0].equals(split[i])) {
                 countword[0]++;
@@ -31,6 +32,7 @@ public class WordsCount {
                 countword[2]++;
             }
         }
+
         return countword;
     }
 

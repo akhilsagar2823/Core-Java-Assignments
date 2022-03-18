@@ -6,17 +6,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.Iterator;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class TraverserUrl {
     public static TreeMap<String, Integer> traverse(URL url) throws IOException {
         try {
-            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+            var in = new BufferedReader(new InputStreamReader(url.openStream()));
             String words[] = WordsCount.inputWords();
             String urlline;
             int[] countword = { 0, 0, 0 };
             while ((urlline = in.readLine()) != null) {
+                // System.out.println(urlline);
                 countword = WordsCount.wordsCount(urlline, words, countword);
             }
             TreeMap<String, Integer> wordcount = new TreeMap<String, Integer>();
@@ -32,14 +33,13 @@ public class TraverserUrl {
     public static void wordWriter(TreeMap<String, Integer> wordcount) throws IOException {
         try {
             BufferedWriter wri = new BufferedWriter(
-                    new FileWriter("D:\\Internship\\P2 - Java Core\\Assignment\\Assignment1\\words.txt"));
-            Iterator itr = (Iterator) wordcount.comparator();
-            while (itr.hasNext()) {
-                wri.write((String) itr.next());
+                    new FileWriter("Assignment1\\words.txt"));
+            for (Map.Entry entry : wordcount.entrySet()) {
+                wri.write(entry.getKey() + " = " + entry.getValue());
+                wri.write("\n");
+                wri.flush();
             }
-            wri.flush();
         } catch (Exception e) {
-            e.printStackTrace();
             throw new IOException();
         }
     }

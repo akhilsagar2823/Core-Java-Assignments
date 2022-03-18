@@ -38,7 +38,7 @@ public class UrlReader {
     public static URL urlReader(int urlnum) throws IOException {
         try {
             BufferedReader urlreader = new BufferedReader(
-                    new FileReader("D:\\Internship\\P2 - Java Core\\Assignment\\Assignment1\\urls.txt"));
+                    new FileReader("Assignment1\\urls.txt"));
             for (int i = 1; i < urlnum; i++) {
                 if (urlreader.readLine() == null) {
                     throw new IOException();
@@ -55,7 +55,7 @@ public class UrlReader {
 
     public static void urlOutput() throws IOException {
         BufferedReader urlreader = new BufferedReader(
-                new FileReader("D:\\Internship\\P2 - Java Core\\Assignment\\Assignment1\\urls.txt"));
+                new FileReader("Assignment1\\urls.txt"));
         int n = 1;
         String url;
         while ((url = urlreader.readLine()) != null) {

@@ -1,2 +1,2 @@
-https://www.codegrepper.com/
-https://www.javatpoint.com/
+https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.State.html
+https://zetcode.com/java/readwebpage/

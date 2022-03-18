@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.net.URL;
@@ -21,7 +20,6 @@ public class Assignment1 {
                     TreeMap<String, Integer> wordcount = TraverserUrl.traverse(traversurl);
                     TraverserUrl.wordWriter(wordcount);
                     System.out.println("\nAssignment  done, you can check the file.");
-                    sc.close();
                     break aa;
                 } else if (addnew == 'y' || addnew == 'Y') {
                     UrlReader.urlInput();
@@ -33,7 +31,6 @@ public class Assignment1 {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
                 System.out.println("Invalid Input !! Try Again !!\n");
             }
         }
