@@ -1,41 +1,21 @@
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.text.ParseException;
-
-import Assignment5.Student;
+import Assignment5.DeserializationTest;
 
 public class Assignment5 {
     public static void main(String[] args) {
-        SerializationTest.Serializing();
-        System.out.println("Done!!!");
+        // SerializationTest.Serializing();
+        // System.out.println("Done!!!");
+        /*
+         * Serialized Student class objects in
+         * output1.ser(dateOfBirth is String) and
+         * output2.ser(dateOfBirth is Date)
+         */
+
+        System.out.println("Deserializing \"output1.ser\" : \n");
+        DeserializationTest.Deserialize1();
+        System.out.println("\nDeserialization done !!\n");
+
+        System.out.println("Deserializing \"output2.ser\" : \n");
+        DeserializationTest.Deserialize2();
+        System.out.println("\nDeserialization done !!\n");
     }
-}
-
-class SerializationTest {
-
-    public static void Serializing() {
-        try {
-            Student student1 = new Student("Akhilsagar", "28/02/2003", "Indore", "M.P.", 452015, "India");
-            Student student2 = new Student("Harsh", "04/09/2002", "Indore", "M.P.", 452005, "India");
-            Student student3 = new Student("Abhay", "18/08/2002", "Kangra", "H.P.", 176001, "India");
-            Student student4 = new Student("Sneha", "10/12/2004", "Kolkata", "W.B.", 700011, "India");
-
-            // ObjectOutputStream oos = new ObjectOutputStream(new
-            // FileOutputStream("Assignment5\\output1.ser")); // dateOfBirth is String type
-
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Assignment5\\output2.ser"));
-
-            oos.writeObject(student1);
-            oos.writeObject(student2);
-            oos.writeObject(student3);
-            oos.writeObject(student4);
-
-        } catch (IOException | ParseException e) {
-            System.out.println("Error occured !!");
-            System.out.println(e);
-            e.printStackTrace();
-        }
-    }
-
 }
