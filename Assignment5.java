@@ -1,7 +1,9 @@
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import Assignment5.*;
+import java.text.ParseException;
+
+import Assignment5.Student;
 
 public class Assignment5 {
     public static void main(String[] args) {
@@ -19,13 +21,17 @@ class SerializationTest {
             Student student3 = new Student("Abhay", "18/08/2002", "Kangra", "H.P.", 176001, "India");
             Student student4 = new Student("Sneha", "10/12/2004", "Kolkata", "W.B.", 700011, "India");
 
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Assignment5\\outpur1.ser"));
+            // ObjectOutputStream oos = new ObjectOutputStream(new
+            // FileOutputStream("Assignment5\\output1.ser")); // dateOfBirth is String type
+
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Assignment5\\output2.ser"));
+
             oos.writeObject(student1);
             oos.writeObject(student2);
             oos.writeObject(student3);
             oos.writeObject(student4);
 
-        } catch (IOException e) {
+        } catch (IOException | ParseException e) {
             System.out.println("Error occured !!");
             System.out.println(e);
             e.printStackTrace();
