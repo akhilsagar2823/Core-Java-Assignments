@@ -65,8 +65,7 @@ public class AddDetails {
         detailslist.add(age);
         detailslist.add(email);
 
-        FileWriter addemployee = new FileWriter(
-                "D:\\Internship\\P2 - Java Core\\Assignment\\Assignment3\\Employee.txt", true);
+        FileWriter addemployee = new FileWriter("Assignment3\\Employee.txt", true);
         for (String s : detailslist) {
             addemployee.write(s + ",  ");
         }

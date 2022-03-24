@@ -17,14 +17,15 @@ public class SearchDetails {
 
         while ((str = readfile.readLine()) != null) {
             String[] details = str.split(",  ");
-            ArrayList<String> detail = new ArrayList<>();
-            for (String temp : details) {
-                detail.add(temp);
+            for (String in : details) {
+                if (search.equals(in)) {
+                    System.out.println(str);
+                    notfound = true;
+                }
             }
-
         }
         if (notfound == false) {
-            System.out.println("\nSorry we do not found any employee with this Information");
+            System.out.println("\nSorry we do not found any employee with this Information\n");
         } else {
             System.out.println("These details are found.");
         }

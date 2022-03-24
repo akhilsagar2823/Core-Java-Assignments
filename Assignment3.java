@@ -31,8 +31,14 @@ public class Assignment3 {
                 case "3":
                     break;
                 case "4":
+                    try {
+                        DeleteDetails.deleteDetails();
+                    } catch (IOException e) {
+                        System.out.println("Some Error Occured !! ");
+                    }
                     break;
                 case "5":
+                    System.out.println("Exiting !! \n");
                     whilebreak = false;
                     break;
                 default:
