@@ -8,7 +8,7 @@ public class Assignment3 {
         boolean whilebreak = true;
         do {
             Scanner sc = new Scanner(System.in);
-            System.out.println("1) Add\n2) Search\n3) Sort\n4)Delete\n5)Exit");
+            System.out.println("1) Add\n2) Search\n3) Sort\n4) Delete\n5) Exit");
             System.out.print("\nEnter your Choice: ");
             String choice = sc.next();
             switch (choice) {
@@ -29,6 +29,25 @@ public class Assignment3 {
                     }
                     break;
                 case "3":
+                    try {
+                        System.out.print("\nSort by :\n\t1) Name\n\t2)Age\nEnter your choice : ");
+                        String sortchoice = sc.next();
+                        switch (sortchoice) {
+                            case "1":
+                                SortDetails.sorting(0);
+                                System.out.println("Sorted by name you can check the file !!");
+                                break;
+                            case "2":
+                                SortDetails.sorting(Integer.parseInt(sortchoice));
+                                System.out.println("Sorted by age you can check the file !!");
+                                break;
+                            default:
+                                System.out.println("Invalid Input !!");
+                                break;
+                        }
+                    } catch (IOException e) {
+                        System.out.println("Some Error Occured !! ");
+                    }
                     break;
                 case "4":
                     try {

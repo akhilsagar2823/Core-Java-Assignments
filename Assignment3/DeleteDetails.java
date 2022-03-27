@@ -47,7 +47,7 @@ public class DeleteDetails {
                 write.newLine();
             }
             write.flush();
+            write.close();
         }
-
     }
 }

@@ -1,5 +1,6 @@
 Akhilsagar prajapat,  28/02/2003,  19,  akhilprajapat28@gmail.com,	
 Atharv parmar,  27/10/2002,  20,  atharv.parmar2710@gmail.com,	
 Aditya shukla,  30/07/2002,  20,  aditya.shukla7302@gmail.com,	
-Harsh pandey,  04/09/2001,  21,  pandey.harsh492@gmail.com,	
+Harsh pandey,  04/09/2000,  21,  pandey.harsh492@gmail.com,	
 Harsh muley,  10/05/2003,  18,  harsh.muley1053@gmail.com,	
+Shreya shrivastav,  01/09/1998,  23,  shreya@gmail.com,  

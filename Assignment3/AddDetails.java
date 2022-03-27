@@ -70,7 +70,5 @@ public class AddDetails {
             addemployee.write(s + ",  ");
         }
         addemployee.write("\n");
-        addemployee.close();
-
     }
 }
